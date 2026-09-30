@@ -1,40 +1,43 @@
 # Student Performance Dashboard
 
-An ML-based web dashboard for analyzing and predicting student performance using academic and engagement-related features.
-
-## 🚧 Project Status
-
-This project is currently under development.
-
-The core machine learning pipeline, database integration, and dashboard structure have been developed. Additional testing, improvements, and final integration are still in progress.
+An ML-based web application for analyzing and predicting student performance using academic, attendance, and engagement-related data.
 
 ## 📌 Project Overview
 
-The Student Performance Dashboard combines:
+The Student Performance Dashboard integrates Machine Learning, Flask, MySQL, and a web-based dashboard to provide student performance analysis and prediction.
 
-- Machine Learning
-- Flask Web Application
-- MySQL Database
-- Data Preprocessing
-- Student Performance Analytics
-- Performance Prediction
+The system processes student information, applies feature engineering and preprocessing, and uses multiple machine learning classification algorithms to predict student performance.
 
-The system uses student academic and engagement information to predict student performance and provide analytical insights through a web dashboard.
+## 🚀 Key Features
+
+- Student performance prediction
+- Student data management
+- Performance analytics
+- Student comparison
+- Interactive dashboard
+- MySQL database integration
+- Multiple machine learning models
+- Model performance evaluation
+- Feature engineering and preprocessing
 
 ## 🤖 Machine Learning Algorithms
 
-Three classification algorithms are trained and compared:
+The project uses and compares three classification algorithms:
 
-1. Random Forest Classifier
-2. Gradient Boosting Classifier
-3. Logistic Regression
+- Random Forest Classifier
+- Gradient Boosting Classifier
+- Logistic Regression
+
+### Model Optimization
 
 The models are optimized using:
 
 - GridSearchCV
 - 3-Fold Stratified Cross-Validation
+- Hyperparameter tuning
+- Class balancing
 
-The best-performing tuned model is selected as the final model.
+The best-performing tuned model is selected as the final prediction model.
 
 ## 📊 Evaluation Metrics
 
@@ -47,9 +50,9 @@ The models are evaluated using:
 
 ## 🗄️ Database
 
-MySQL is used to store and manage student-related application data.
+MySQL is used for storing and managing student-related application data.
 
-Database-related components include:
+Database components include:
 
 - Database connection
 - Database initialization
@@ -58,13 +61,20 @@ Database-related components include:
 
 ## 🛠️ Technologies Used
 
+### Backend
 - Python
 - Flask
+
+### Database
 - MySQL
+
+### Machine Learning
+- Scikit-learn
 - Pandas
 - NumPy
-- Scikit-learn
 - Joblib
+
+### Frontend
 - HTML
 - CSS
 - JavaScript
@@ -85,6 +95,7 @@ student_dashboard/
 │   └── student_data.csv
 │
 ├── src/
+│   ├── __init__.py
 │   ├── db.py
 │   ├── init_db.py
 │   ├── preprocess.py
