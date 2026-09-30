@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container py-4">
+    <h3 class="mb-4">Model Performance & Comparison</h3>
+    
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0 text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="text-start ps-4">Model Name</th>
+                            <th>Accuracy (%)</th>
+                            <th>Precision (%)</th>
+                            <th>Recall (%)</th>
+                            <th>F1-Score (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for model_name, values in metrics.items() %}
+                        <tr>
+                            <td class="text-start ps-4 fw-bold text-primary">{{ model_name }}</td>
+                            <td>
+                                <span class="badge bg-success fs-6">{{ values.accuracy }}%</span>
+                            </td>
+                            <td>{{ values.precision }}%</td>
+                            <td>{{ values.recall }}%</td>
+                            <td>{{ values.f1_score }}%</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
